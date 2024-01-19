@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
+    <link rel="manifest" href="img/site.webmanifest">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&display=swap">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <style>
+        body {
+            font-family: 'Anton', sans-serif;
+            background: #C9D6FF;  /* fallback for old browsers */
+            background: -webkit-linear-gradient(to right, #E2E2E2, #C9D6FF);  /* Chrome 10-25, Safari 5.1-6 */
+            background: linear-gradient(to right, #E2E2E2, #C9D6FF); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        .container {
+            text-align: center;
+            position: relative;
+        }
+
+        p {
+            font-size: 3em;
+            font-weight: 900;
+            margin: 0;
+        }
+
+        .btn-group {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+        }
+
+        button {
+            font-size: 1.5em;
+            cursor: pointer;
+        }
+    </style>
+    <title>Quotify</title>
+</head>
+<body>
+    <div class="container">
+        <p id="quote"></p>
+        <div class="btn-group">
+            <button id="refreshButton" class="btn btn-outline-secondary" onclick="getRandomQuote()">
+                <i class="fa fa-refresh" aria-hidden="true"></i>
+            </button>
+            <button id="copyButton" class="btn btn-outline-secondary ml-2" onclick="copyToClipboard()">
+                <i class="fa fa-clipboard" aria-hidden="true"></i>
+            </button>
+            <button id="readButton" class="btn btn-outline-secondary ml-2" onclick="readQuote()">
+                <i class="fa fa-volume-up" aria-hidden="true"></i>
+            </button>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
